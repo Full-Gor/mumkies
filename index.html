@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mumkies - Cookies X-TRA MOELLEUX</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Bouton panier flottant -->
+    <button id="floating-cart-btn" class="floating-cart-btn" style="display: none;">
+        <svg class="cart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="m1 1 4 4 2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        <span id="cart-count" class="cart-count">0</span>
+    </button>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-bg-effects">
+            <div class="bg-shape shape-1"></div>
+            <div class="bg-shape shape-2"></div>
+            <div class="bg-shape shape-3"></div>
+            <div class="bg-shape shape-4"></div>
+            <div class="bg-shape shape-5"></div>
+            <div class="bg-shape shape-6"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="logo-container">
+                <div class="logo-badge">
+                    <img 
+                        src="public/IMG-20250905-WA0107.jpg" 
+                        alt="Mumkies Logo" 
+                        class="logo-image"
+                    />
+                </div>
+            </div>
+            
+            <div class="slogan">
+                <p>C'EST BON ET C'EST FAIT MAISON !</p>
+            </div>
+            
+            <h1 class="main-title">
+                <div class="animated-title" data-text="X-TRA MOELLEUX !"></div>
+            </h1>
+            
+            <div class="price-section">
+                <span class="price">2.50€</span>
+                <div class="animated-title cookies-title" data-text="COOKIES"></div>
+            </div>
+            
+            <p class="description">
+                Découvrez nos délicieux cookies X-TRA MOELLEUX faits maison !<br>
+                Nutella, Caramel Beurre Salé, Coco White et bien plus...
+            </p>
+            
+            <div class="delivery-info">
+                <svg class="truck-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="1" y="3" width="15" height="13"></rect>
+                    <polygon points="16,6 20,6 23,11 23,16 16,16"></polygon>
+                    <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                    <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                </svg>
+                <span>Livraison offerte à partir de 15€</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cookies Section -->
+    <section class="products-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="animated-title section-title" data-text="COOKIES"></div>
+                <p class="section-description">
+                    Découvrez nos dernières créations, des saveurs uniques qui éveilleront vos papilles
+                </p>
+            </div>
+            <div id="new-products" class="products-grid"></div>
+        </div>
+    </section>
+
+    <!-- Bowls Section -->
+    <section class="products-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="animated-title section-title" data-text="BOWLS"></div>
+                <div class="animated-title section-subtitle" data-text="COOKIES & GLACES"></div>
+                <p class="section-description">
+                    Nos délicieux cookies & glaces !
+                </p>
+            </div>
+            <div id="best-sellers" class="products-grid"></div>
+        </div>
+    </section>
+
+    <!-- Cart Section -->
+    <section id="cart-section" class="cart-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="animated-title section-title" data-text="MON PANIER"></div>
+            </div>
+            
+            <div id="cart-content">
+                <div id="empty-cart" class="empty-cart">
+                    <svg class="empty-cart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="m1 1 4 4 2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <p class="empty-cart-title">Votre panier est vide</p>
+                    <p class="empty-cart-subtitle">Ajoutez des cookies délicieux !</p>
+                </div>
+                
+                <div id="cart-items" class="cart-items" style="display: none;"></div>
+                
+                <div id="cart-summary" class="cart-summary" style="display: none;">
+                    <div class="summary-row">
+                        <span>Sous-total</span>
+                        <span id="subtotal">0.00 €</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Livraison</span>
+                        <span id="delivery-cost">5.00 €</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total</span>
+                        <span id="total">0.00 €</span>
+                    </div>
+                    <button class="whatsapp-btn">Commander via WhatsApp</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img 
+                            src="public/IMG-20250905-WA0107.jpg" 
+                            alt="Mumkies Logo" 
+                            class="footer-logo-image"
+                        />
+                        <span>Mumkies</span>
+                    </div>
+                    <p class="footer-slogan">C'EST BON ET C'EST FAIT MAISON !</p>
+                    <p class="footer-description">
+                        Des cookies X-TRA MOELLEUX préparés avec amour dans notre atelier artisanal.
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Nos Spécialités</h3>
+                    <ul>
+                        <li>Cookies X-TRA MOELLEUX</li>
+                        <li>Bowls Cookies & Glaces</li>
+                        <li>Recettes artisanales</li>
+                        <li>Ingrédients premium</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <div class="contact-info">
+                        <p>📱 07 84 95 22 50</p>
+                        <p>📧 contact@mumkies.fr</p>
+                        <p>📍 Paris, France</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2024 Mumkies. Tous droits réservés. Fait avec ❤️ pour les amoureux des cookies.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
