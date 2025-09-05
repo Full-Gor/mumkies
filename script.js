@@ -426,7 +426,7 @@ function orderViaWhatsApp() {
     message += `*Total: ${total.toFixed(2)}€*\n\n`;
     message += 'Merci ! 😊';
     
-    const phoneNumber = '0784952250'; // Votre numéro WhatsApp
+    const phoneNumber = '33784952250'; // Votre numéro WhatsApp avec indicatif +33
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     
     window.open(whatsappUrl, '_blank');
