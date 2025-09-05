@@ -402,6 +402,36 @@ function scrollToCart() {
     });
 }
 
+// Fonction pour commander via WhatsApp
+function orderViaWhatsApp() {
+    if (cart.length === 0) {
+        alert('Votre panier est vide ! Ajoutez des produits avant de commander.');
+        return;
+    }
+    
+    let message = '🍪 *Commande Mumkies* 🍪\n\n';
+    message += 'Bonjour ! Je souhaite passer une commande :\n\n';
+    
+    cart.forEach(item => {
+        message += `• ${item.product.name} x${item.quantity} = ${(item.product.price * item.quantity).toFixed(2)}€\n`;
+    });
+    
+    const subtotal = calculateTotal();
+    const deliveryCost = subtotal >= 25 ? 0 : 5;
+    const total = subtotal + deliveryCost;
+    
+    message += `\n📊 *Récapitulatif :*\n`;
+    message += `Sous-total: ${subtotal.toFixed(2)}€\n`;
+    message += `Livraison: ${deliveryCost === 0 ? 'Gratuite' : deliveryCost.toFixed(2) + '€'}\n`;
+    message += `*Total: ${total.toFixed(2)}€*\n\n`;
+    message += 'Merci ! 😊';
+    
+    const phoneNumber = '0784952250'; // Votre numéro WhatsApp
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    
+    window.open(whatsappUrl, '_blank');
+}
+
 // Initialisation
 function init() {
     // Rendu des produits
@@ -425,6 +455,12 @@ function init() {
     // Bouton panier flottant
     document.getElementById('floating-cart-btn').addEventListener('click', scrollToCart);
     
+    // Bouton WhatsApp
+    const whatsappBtn = document.querySelector('.whatsapp-btn');
+    if (whatsappBtn) {
+        whatsappBtn.addEventListener('click', orderViaWhatsApp);
+    }
+    
     // Initialisation du panier
     updateCartCount();
     renderCart();
@@ -439,3 +475,4 @@ document.addEventListener('DOMContentLoaded', init);
 // Exposition des fonctions globales pour les onclick
 window.updateQuantity = updateQuantity;
 window.removeFromCart = removeFromCart;
+window.orderViaWhatsApp = orderViaWhatsApp;

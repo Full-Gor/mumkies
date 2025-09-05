@@ -195,32 +195,38 @@ body {
 /* Animations des titres */
 .animated-title {
     display: inline-block;
-    font-family: 'Comic Sans MS', cursive;
+    font-family: 'Comic Sans MS', 'Chalkboard SE', 'Marker Felt', cursive;
     font-weight: 900;
     letter-spacing: 0.05em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .main-title .animated-title {
-    font-size: clamp(3rem, 8vw, 7rem);
+    font-size: clamp(2.5rem, 8vw, 7rem);
     color: #581c87;
     text-shadow: 3px 3px 0px white, -3px -3px 0px white, 3px -3px 0px white, -3px 3px 0px white;
+    line-height: 1.1;
 }
 
 .cookies-title {
-    font-size: clamp(2rem, 6vw, 6rem);
+    font-size: clamp(1.8rem, 6vw, 6rem);
     color: #581c87;
+    line-height: 1.1;
 }
 
 .section-title {
-    font-size: clamp(2.5rem, 6vw, 6rem);
+    font-size: clamp(2rem, 6vw, 6rem);
     color: #581c87;
     margin-bottom: 16px;
+    line-height: 1.1;
 }
 
 .section-subtitle {
-    font-size: clamp(2rem, 5vw, 4rem);
+    font-size: clamp(1.5rem, 5vw, 4rem);
     color: #ec4899;
     margin-bottom: 16px;
+    line-height: 1.1;
 }
 
 /* Animation rebond lettre par lettre */
@@ -772,5 +778,31 @@ body {
     .footer-content {
         grid-template-columns: 1fr;
         text-align: center;
+    }
+    
+    /* Amélioration des titres sur mobile */
+    .main-title .animated-title {
+        font-size: clamp(2rem, 10vw, 4rem);
+        text-shadow: 2px 2px 0px white, -2px -2px 0px white, 2px -2px 0px white, -2px 2px 0px white;
+    }
+    
+    .cookies-title {
+        font-size: clamp(1.5rem, 8vw, 3rem);
+    }
+    
+    .section-title {
+        font-size: clamp(1.8rem, 8vw, 3.5rem);
+    }
+    
+    .section-subtitle {
+        font-size: clamp(1.3rem, 7vw, 2.5rem);
+    }
+    
+    .price {
+        font-size: 24px;
+    }
+    
+    .description {
+        font-size: 16px;
     }
 }
