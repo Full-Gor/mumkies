@@ -192,11 +192,14 @@ body {
     height: 20px;
 }
 
+/* Import de polices web pour cohérence cross-platform */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&family=Fredoka:wght@300;400;500;600;700&display=swap');
+
 /* Animations des titres */
 .animated-title {
     display: inline-block;
-    font-family: 'Comic Sans MS', 'Chalkboard SE', 'Marker Felt', 'Bradley Hand', 'Brush Script MT', cursive;
-    font-weight: 900;
+    font-family: 'Fredoka One', 'Fredoka', 'Comic Sans MS', cursive;
+    font-weight: 400;
     letter-spacing: 0.1em;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -786,7 +789,11 @@ body {
         text-align: center;
     }
     
-    /* Amélioration des titres sur mobile */
+    /* Amélioration des titres sur mobile - MÊME POLICE */
+    .animated-title {
+        font-family: 'Fredoka One', 'Fredoka', 'Comic Sans MS', cursive !important;
+    }
+    
     .main-title .animated-title {
         font-size: clamp(2.5rem, 12vw, 5rem);
         text-shadow: 3px 3px 0px white, -3px -3px 0px white, 3px -3px 0px white, -3px 3px 0px white;
