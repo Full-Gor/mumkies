@@ -9,12 +9,15 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.6;
     color: #333;
-    background-image: url('https://media.istockphoto.com/id/1404468158/fr/vectoriel/fond-abstrait-couleur-pastel-douce.jpg?s=1024x1024&w=is&k=20&c=aSfj4CQv1z0K38kTYEnQA1UmGx32sfJbBdoKl3m13tA=');
-    background-size: 150%;
+    background-image: url('/public/backround.jpg');
+    background-size: 100%;
     background-position: center top;
     background-repeat: no-repeat;
     background-attachment: fixed;
     min-height: 100vh;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
 }
 
 .container {
@@ -760,6 +763,14 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
+    body {
+        background-image: url('/public/backround.jpg') !important;
+        background-size: 120% !important;
+        background-position: center top !important;
+        background-repeat: no-repeat !important;
+        background-attachment: scroll !important;
+    }
+    
     .hero-content {
         padding: 20px;
     }
