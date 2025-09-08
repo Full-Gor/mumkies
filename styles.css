@@ -804,6 +804,18 @@ body {
         backdrop-filter: blur(3px) !important;
     }
     
+    .products-section {
+        background: transparent !important;
+    }
+    
+    .hero {
+        background: transparent !important;
+    }
+    
+    .hero-bg-effects {
+        display: none !important;
+    }
+    
     /* Amélioration des titres sur mobile - MÊME POLICE QUE LE LOGO */
     .animated-title {
         font-family: 'Baloo 2', 'Nunito', 'Quicksand', 'Arial Rounded MT Bold', 'Helvetica Rounded', sans-serif !important;
