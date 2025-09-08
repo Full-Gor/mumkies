@@ -498,8 +498,8 @@ body {
 /* Section panier */
 .cart-section {
     padding: 64px 0;
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
 }
 
 .empty-cart {
@@ -797,6 +797,11 @@ body {
     .footer-content {
         grid-template-columns: 1fr;
         text-align: center;
+    }
+    
+    .cart-section {
+        background: rgba(255, 255, 255, 0.2) !important;
+        backdrop-filter: blur(3px) !important;
     }
     
     /* Amélioration des titres sur mobile - MÊME POLICE QUE LE LOGO */
